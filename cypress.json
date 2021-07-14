@@ -1,0 +1,6 @@
+{
+    "testFiles": "**/*.feature",
+    "baseUrl": "https://www.fleury.com.br/",
+    "viewportWidth": 1200,
+    "viewportHeight": 660
+}
