@@ -18,7 +18,7 @@ class StepsPage{
 
     static selecinaOpc(){
 
-        let plv1; //pega nome da unidade
+        let plv1; //captura nome da unidade
         cy.get('#anchor-unit-cell-alphaville > div:nth-child(1) > div').should(($div) => {
         plv1 = $div.text();
         });
@@ -26,7 +26,7 @@ class StepsPage{
         //encontra primeira unidade e clica em Ver Detalhes
         cy.get('#gatsby-focus-wrapper > div.backgroundstyled__NeutralBackground-sc-1b1f5j3-3.dHyzS > div.sc-bdVaJa.gridcomponent__GridStyled-sc-8zg10d-0.fHFDYJ > div:nth-child(2) > div:nth-child(1)').contains("Ver detalhes").click()
 
-        //pega o nome da unidade selecionada e compara com o nome pego na página anterior
+        //captura o nome da unidade selecionada e compara com o nome pego na página anterior
         cy.xpath('//*[@id="gatsby-focus-wrapper"]/div[8]/div[2]/div').should(($div) => {
             const plv2 = $div.text();
             expect(plv1).to.deep.equal(plv2);
